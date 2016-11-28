@@ -1,49 +1,35 @@
-var User = function User(firstname, lastname, weight) {
-  'use strict'
-  this.firstname = lastname || 'General';
-  this.lastname = lastname || 'GM'
-  this.weight = '0';
-  this.sayHi = this.sayHi();
+function User(firstname, lastname, ethnicity, gender, job, age) {
+  'use strict';
+  this.firstname = firstname || 'Tess';
+  this.lastname = lastname || 'Bob';
+  this.ethnicity = ethnicity;
+  this.gender = gender || 'Female';
+  this.job = job;
+  this.age = age;
 }
+
 User.prototype.sayHi = function() {
-  'use strict'
-  return this.sayHi;
+  'use strict';
+  return 'Hi';
 };
 
-User.prototype.sendMail = function() {
-  'use strict'
-  return this.sendMail
+User.prototype.toString = function() {
+  'use strict';
+  return this.firstname + ' ' + this.lastname + ', ' + this.gender +
+    ', ' + this.ethnicity + ', ' + this.job;
 };
 
 User.prototype.isPetite = function() {
-  'use strict'
-  return this.firstname + " "
-  this.lastname + " " + "is petite";
+  'use strict';
+  return this.firstname + ', ' + this.lastname + ' is petite';
 };
 
-User.prototype.canDraw = function() {
-  'use strict'
-  if (this.name === "Olayemi" || this.name === "Awofadeju") {
-    return this.name + " is an artist and a developer";
-  } else {
-    return "not " + this.name;
-  }
-  return this;
+User.prototype.isSeniorCitizen = function() {
+  'use strict';
+  return this.age > 50;
 };
-
-function femaleUser(firstname, lastname, weight) {
-  User.call(this, firstname, lastname, weight);
-}
-femaleUser.prototype.sayHi = function() {
-  console.log('Hi' + this.firstName);
-};
-
-var allUsers = [
-  new femaleUser("Hello"),
-  new femaleUser("I'm female"),
-];
 
 
 module.exports = {
   User: User
-}
+};
