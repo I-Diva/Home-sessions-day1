@@ -8,8 +8,7 @@ var User = require('./oop.js').User;
   describe("User Class: Create a create, make it Nigerian", function() {
 
     it("The user should be a type of `object`, and an instance of the `User` class", function() {
-      var segun = new User('segun'
-);
+      var segun = new User('segun');
       expect(typeof segun).to.equal(typeof {});
       //expect(honda instanceof Car).to.beTruthy();
     });
@@ -30,9 +29,9 @@ var User = require('./oop.js').User;
       var yemi = new User('Yemi', 'Awofadeju');
       expect(yemi.sendMail).to.equal('olayemi@mail.com');
 
-      var tope = new User('Tope', 'Mobolade');
-      expect(tope.weight).to.equal(70);
-      tope.email('tope@mail.com');
+      var yemi = new User('Yemi', 'Awofadeju');
+      expect(yemi.weight).to.equal(0);
+      yemi.sendMail('yemi@mail.com');
       expect(tope.sendMail).to.equal('email not found');
       expect((function() {
         return new User('sola', 'Fosudo');
