@@ -1,6 +1,6 @@
 var app = {
   dataTypes: function(data) {
-    if (data == null || typeof data === 'undefined') {
+    if (data === null || typeof data === 'undefined') {
       return 'no value';
     }
     if (typeof data == 'string') {

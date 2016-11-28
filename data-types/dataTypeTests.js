@@ -70,11 +70,11 @@ describe("Data types tests ", function() {
     })
 
     it("should return `undefined` for `[]`", function() {
-      expect(myApp.dataTypes([])).not.to.not.be.undefined();
+      expect(myApp.dataTypes([])).to.equal(undefined);
     })
 
     it("should return 'undefined' for `[4, 9]`", function() {
-      expect(myApp.dataTypes([4, 9])).not.to.not.be.undefined();
+      expect(myApp.dataTypes([4, 9])).to.equal(undefined);
     })
   })
 })
