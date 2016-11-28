@@ -1,9 +1,15 @@
+'use strict'
+var chai = require('chai');
+var expect = chai.expect;
+var User = require('./oop.js').User;
+
 (function() {
   'use strict';
   describe("User Class: Create a create, make it Nigerian", function() {
 
     it("The user should be a type of `object`, and an instance of the `User` class", function() {
-      var segun = new User('segun');
+      var segun = new User('segun'
+);
       expect(typeof segun).to.equal(typeof {});
       //expect(honda instanceof Car).to.beTruthy();
     });
@@ -31,31 +37,6 @@
       expect((function() {
         return new User('sola', 'Fosudo');
       }()).sayHi).to.equal('A nigerian says Hi');
-    });
-
-    it("The car shoud have four (4) wheels except its a type of trailer", function() {
-      var man = new Car('MAN', 'Truck', 'trailer');
-      expect(man.numOfWheels).to.equal(8);
-      expect(man.isSaloon).to.equal(false);
-
-      var koenigsegg = new Car('Koenigsegg', 'Agera R');
-      expect(koenigsegg.numOfWheels).to.equal(4);
-      //expect(koenigsegg.isSaloon).to.beTruthy();
-    });
-
-    it("The Trailer should have speed 0 km/h until you put `the pedal to the metal`", function() {
-      var man = new Car('MAN', 'Truck', 'trailer');
-      expect(man.speed).to.equal('0 km/h');
-      man.drive(7);
-      expect(man.speed).to.equal('77 km/h');
-    });
-
-    it("The car drive function should return the instance of the Car class", function() {
-      var man = new Car('MAN', 'Truck', 'trailer');
-      var drivingMan = man.drive(7);
-      //expect(drivingMan instanceof Car).to.beTruthy();
-      expect(typeof drivingMan.drive).to.equal(typeof(function() {}));
-      expect(man.speed).to.equal(drivingMan.speed);
     });
 
   });

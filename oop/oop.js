@@ -1,4 +1,5 @@
 var User = function User(firstname, lastname, email, weight) {
+  'use strict'
   this.firstname = lastname || 'General';
   this.lastname = lastname || 'GM'
   this.email = email;
@@ -9,6 +10,7 @@ var User = function User(firstname, lastname, email, weight) {
 
 };
 User.prototype.sayHi = function() {
+  'use strict'
   if (this.firstname === "Yemi" && this.lastname === "Awofadeju") {
     return "A nigerian says Hi";
   }
@@ -16,6 +18,7 @@ User.prototype.sayHi = function() {
 };
 
 User.prototype.sendMail = function() {
+  'use strict'
   if (this.email !== "not found!") {
     return "olayemi@mail.com"
   }
@@ -23,14 +26,16 @@ User.prototype.sendMail = function() {
 };
 
 User.prototype.isPetite = function() {
+  'use strict'
   if (this.weight <= 50) {
     return this.firstname + " "
-    this.lastname " " + "is petite";
+    this.lastname + " " + "is petite";
   }
   return "different person";
 };
 
 User.prototype.canDraw = function() {
+  'use strict'
   if (this.name === "Olayemi" || this.name === "Awofadeju") {
     return this.name + " is an artist and a developer";
   } else {
@@ -39,4 +44,6 @@ User.prototype.canDraw = function() {
   return this;
 };
 
-}
+module.exports = {
+  User: User
+};
