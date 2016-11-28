@@ -4,9 +4,7 @@ var expect = chai.expect;
 var User = require('./oop.js').User;
 
 (function() {
-  'use strict';
   describe('User Class: Creates a user', function() {
-
     it('The user should be a type of `object`, and an instance of the `User` class', function() {
       var segun = new User('segun');
       expect(typeof segun).to.equal(typeof {});
@@ -38,6 +36,11 @@ var User = require('./oop.js').User;
     it('should return true for senior citizens for people above 50', function() {
       var user = new User('Yusuf', 'Adeniyi', 'African', 'Male', 'Software Developer', 69);
       expect(user.isSeniorCitizen()).to.be.ok;
+    });
+
+    it('User should be able to say hi', function() {
+      var user = new User();
+      expect(user.sayHi()).to.equal('Hi');
     });
   });
 })();
